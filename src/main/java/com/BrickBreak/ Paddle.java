@@ -28,6 +28,16 @@ public class Paddle {
 	//methods:
 
 //
+//  Pre-condition: x, velocity, width, and height must be defined for the object
+//  Post-condition: Draws the object
+//
+	public void draw(Graphics g){
+			g.setColor(Color.white);
+			g.fill3DRect(x, velocity, width, height, false);
+		}
+
+
+//
 //  Pre-condition: Velocity must be defined
 //  Post-condition: Return int velocity
 //
@@ -35,6 +45,10 @@ public class Paddle {
 		return velocity;
 	}
 
+//
+//  Pre-condition: Velocity must be defined 
+//  Post-condition: Adds velocity to x, in turn, making it move
+//
 	public void move(){
 		x += velocity;
 	}
@@ -53,6 +67,14 @@ public class Paddle {
 //
 	public void setX(int x){
 		this.x = x;
+	}
+
+//
+//  Pre-condition: A paddle object must be created
+//  Post-condition: Y coordinate will be eqaul to the given value
+//
+	public void setY(int y){
+		this.y = y;
 	}
 	
 	
