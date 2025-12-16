@@ -20,7 +20,9 @@ public class Ball {
 	public Ball(int x, int y, int diameter){
 		this.x = x;
 		this.y = y;
-		this.radius = radius*2;
+		this.radius = diameter/2;
+		this.xVelocity = 0;
+		this.yVelocity = 0;
 	}
 	
 	//methods:
@@ -31,7 +33,7 @@ public class Ball {
 //
 	public void draw(Graphics g){
 		g.setColor(Color.white);
-		g.fillOval(x, y, radius*2, radius*2);
+		g.fillOval(x, y, radius, radius);
 	}
 
 //
@@ -56,7 +58,7 @@ public class Ball {
 //  Post-condition: returns int radius
 //
 	public int getSize(){
-		return radius;
+		return 2*radius;
 	}
 
 //
@@ -112,8 +114,8 @@ public class Ball {
 //  Post-condition: Sets the yVelocity and xVelocity to 1
 //
 	public void move(){
-		xVelocity = 1;
-		yVelocity = 1;
+		x += xVelocity;
+		y += yVelocity;
 	}
 
 

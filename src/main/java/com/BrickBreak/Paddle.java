@@ -33,7 +33,7 @@ public class Paddle {
 //
 	public void draw(Graphics g){
 			g.setColor(Color.white);
-			g.fill3DRect(x, velocity, width, height, false);
+			g.fillRect(x, y, width, height);
 		}
 
 
@@ -50,7 +50,7 @@ public class Paddle {
 //  Post-condition: Adds velocity to x, in turn, making it move
 //
 	public void move(){
-		x += velocity;
+		x += (velocity/4);
 	}
 
 //
